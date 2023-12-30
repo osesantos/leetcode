@@ -19,7 +19,9 @@ var romanToInt = function(s) {
     .replace('XC', 'LXXXX')
     .replace('CD', 'CCCC')
     .replace('CM', 'DCCCC')
-    .split('').map(a => Number(mapping.get(a))).reduce((a, b) => a + b);
+    .split('')
+    .map(a => Number(mapping.get(a)))
+    .reduce((a, b) => a + b);
 };
 
 console.log(romanToInt("III")); // 3
